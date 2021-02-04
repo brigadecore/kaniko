@@ -32,6 +32,7 @@ RUN buildDeps="apt-transport-https curl gnupg-agent gnupg2 software-properties-c
   && apt-get install -y --no-install-recommends \
     $buildDeps \
     ca-certificates \
+    git \
     make \
   && curl -fsSLk https://download.docker.com/linux/debian/gpg | apt-key add \
   && add-apt-repository \
