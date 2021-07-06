@@ -27,7 +27,7 @@ COPY --from=base /kaniko/executor /usr/local/bin/kaniko
 
 # Install make and docker-ce-cli
 RUN buildDeps="apt-transport-https curl gnupg-agent gnupg2 software-properties-common" \
-  && apt-get update \
+  && apt-get update -y \
   && apt-get upgrade -y \
   && apt-get install -y --no-install-recommends \
     $buildDeps \
@@ -39,8 +39,8 @@ RUN buildDeps="apt-transport-https curl gnupg-agent gnupg2 software-properties-c
     "deb [arch=amd64] https://download.docker.com/linux/debian \
     $(lsb_release -cs) \
     stable" \
-  && apt-get update \
-  && apt-get install docker-ce-cli \
+  && apt-get update -y \
+  && apt-get install docker-ce-cli -y \
   && apt-get purge -y --auto-remove $buildDeps \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
