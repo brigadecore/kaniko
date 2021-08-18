@@ -53,9 +53,9 @@ const pushJob = (event: Event) => {
 }
 jobs[pushJobName] = pushJob
 
-// Just build, unless this is a merge to master, then build and push.
+// Just build, unless this is a merge to main, then build and push.
 async function runSuite(event: Event): Promise<void> {
-  if (event.worker?.git?.ref != "master") {
+  if (event.worker?.git?.ref != "main") {
     // Just build
     await buildJob(event).run()
   } else {
