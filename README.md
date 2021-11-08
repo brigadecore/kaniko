@@ -1,6 +1,7 @@
 # Brigade Kaniko Image
 
 ![build](https://badgr.brigade2.io/v1/github/checks/brigadecore/kaniko/badge.svg?appID=99005)
+[![slack](https://img.shields.io/badge/slack-brigade-brightgreen.svg?logo=slack)](https://kubernetes.slack.com/messages/C87MF1RFD)
 
 [Kaniko](https://github.com/GoogleContainerTools/kaniko) is a standalone tool
 for building OCI images. For projects that utilize containerized test and build
